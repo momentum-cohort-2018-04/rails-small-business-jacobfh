@@ -1,0 +1,40 @@
+<h1>Inventory</h1>
+
+<%= link_to 'Back', welcome_index_path %>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Item</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Condition</th>
+      <th>Item Width</th>
+      <th>Item Length</th>
+      <th>Item Height</th>
+      <th>Quantity</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @products.each do |product| %>
+    <tr>
+        <td><%= product.pid %></td>
+        <td><%= product.item %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td><%= product.condition %></td>
+        <td><%= product.dimension_w %></td>
+        <td><%= product.dimension_l %></td>
+        <td><%= product.dimension_h %></td>
+        <td><%= product.quantity %></td>
+        <td><%= product.category %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Back', welcome_index_path %>
+
